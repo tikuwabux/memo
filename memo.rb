@@ -8,7 +8,9 @@ memo_type = gets.to_i
 # ユーザーの入力が1の場合の処理
 if memo_type == 1
   puts "拡張子を除いたファイル名を入力してください"
-  new_file_name = gets
+  
+  #ユーザーの入力したファイル名を取得し、末尾の改行文字を削除
+  new_file_name = gets.chomp!
   
   puts "メモしたい内容を記入してください"
   puts "完了したらCtrl + Dを押してください"
@@ -23,7 +25,7 @@ if memo_type == 1
 # ユーザの入力が2の場合の処理  
 elsif memo_type == 2
   puts "拡張子を除いたファイル名を入力してください"
-  edit_file_name = gets
+  edit_file_name = gets.chomp!
   
   puts "メモの内容を編集してください"
   puts "完了したらCtrl + Dを押してください"
